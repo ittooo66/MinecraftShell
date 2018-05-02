@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #設定ファイル読み込み
-. ./MCConf.sh
+. /MinecraftServer/shells/MCConf.sh
 
 #Monito停止用ファイルの削除
 if [[ ! -z ${MC_SHELL} && ! -z ${MC_NOCHK} ]] ; then

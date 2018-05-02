@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #設定ファイル読み込み
-. ./MCConf.sh
+. /MinecraftServer/shells/MCConf.sh
 
 #再起動通知
 screen -p 0 -S ${SCREEN_NAME} -X eval 'stuff "say 30秒後にサーバーを再起動します\015"'

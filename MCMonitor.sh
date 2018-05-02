@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #設定ファイル読み込み
-. ./MCConf.sh
+. /MinecraftServer/shells/MCConf.sh
 
 #nochkファイルがあれば監視しない
 if [ -e ${MC_SHELL}/${MC_NOCHK} ]; then
