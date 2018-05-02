@@ -1,8 +1,7 @@
 #!/bin/bash
 
-
 while :
-do 
+do
 
 echo `ps -aux | grep spigot | grep -v grep | awk '{print $3}'`
 sleep 1

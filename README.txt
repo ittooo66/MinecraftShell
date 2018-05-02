@@ -3,6 +3,12 @@
 ■MCConf.sh
 ・各シェルで使用する変数格納用シェル
 
+■MCStart.sh
+→Minecraft起動シェル
+
+■MCStop.sh
+→Minecraft停止シェル
+
 ■MCRestart.sh
 ・Minecraft再起動シェル。
 →Cronで1日1回起動させる
