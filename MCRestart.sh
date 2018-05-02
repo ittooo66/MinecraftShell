@@ -24,7 +24,7 @@ done
 cp -rp ${MC_HOME} ${MC_BACKUP}/`date +%Y_%m%d_%H%M`
 
 #Monito停止用ファイルの削除
-if [ ! -z ${MC_SHELL} && ! -z ${MC_NOCHK}] ; then
+if [[ ! -z ${MC_SHELL} && ! -z ${MC_NOCHK} ]] ; then
   rm -f ${MC_SHELL}/${MC_NOCHK}
 fi
 
