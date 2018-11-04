@@ -1,14 +1,14 @@
 #!/bin/bash
 
-#Minecraftのバックアップディレクトリ
-MC_BACKUP=/MinecraftServer/backup
+#Minecraftのバックアップ先ディレクトリ
+MC_BACKUP=/sf/backup
 #MinecraftのShell格納ディレクトリ
-MC_SHELL=/MinecraftServer/shells
+MC_SHELL=/sf/shells
 #Minecraftのホームディレクトリ
-MC_HOME=/MinecraftServer/spigot_1.12.2
+MC_HOME=/sf/forge
 #Minecraft起動監視除外ファイル
 MC_NOCHK=MCNotMonitor
 #MinecraftのJarファイル名称
-MC_JAR=spigot-1.12.2.jar
+MC_JAR=forge-1.7.10-10.13.4.1558-1.7.10-universal.jar
 #Minecraftを起動させるScreenの名称
 SCREEN_NAME='minecraft'
