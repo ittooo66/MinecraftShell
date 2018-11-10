@@ -6,7 +6,7 @@
 while :
 do
 
-CPUPER=`ps -aux | grep forge | grep -v grep | grep -v SCREEN | awk '{print $3}'`
+CPUPER=`ps -aux | grep ${MC_PROC_NAME} | grep -v grep | grep -v SCREEN | awk '{print $3}'`
 echo `date` CPU使用率 ${CPUPER}% >> ${MC_LOGDIR}/cpu.log
 sleep 10
 
