@@ -5,7 +5,7 @@ MC_BACKUP=/sf/backup
 #MinecraftのShell格納ディレクトリ
 MC_SHELL=/sf/shells
 #Minecraftのホームディレクトリ
-MC_HOME=/sf/dqm5
+MC_HOME=/run/user/42/dqm5
 #Minecraft起動監視除外ファイル
 MC_NOCHK=MCNotMonitor
 #MinecraftのJarファイル名称
