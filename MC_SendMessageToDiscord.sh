@@ -1,7 +1,11 @@
 #!/bin/bash
 
-# 設定値のロード
+# 設定読み込み
 . /sf/shells/MC_Conf.sh
 
-# $1を送信
+# =====Minecraftメッセージ送信シェル=====
+#  1. $1をメッセージとしてDiscordに送信
+# =====================================
+
+# $1をメッセージとしてDiscordに送信
 curl -s -X POST -H 'Content-Type: application/json' -d '{"content": "'$1'"}' ${MC_WEBHOOK}
