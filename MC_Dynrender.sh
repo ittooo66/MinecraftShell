@@ -7,5 +7,5 @@
 # 1.レンダリングを実行
 # =================================
 
-# Render開始
+# レンダリングを実行
 screen -p 0 -S ${SCREEN_NAME} -X eval 'stuff "dynmap fullrender world\015"'
