@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #設定ファイル読み込み
-. /sf/shells/MCConf.sh
+. /sf/shells/MC_Conf.sh
 
 #Render開始
 screen -p 0 -S ${SCREEN_NAME} -X eval 'stuff "dynmap fullrender world\015"'

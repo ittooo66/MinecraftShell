@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #設定読み込み
-. /sf/shells/MCConf.sh
+. /sf/shells/MC_Conf.sh
 
 while :
 do

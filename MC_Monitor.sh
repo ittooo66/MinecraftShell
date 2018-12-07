@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #設定ファイル読み込み
-. /sf/shells/MCConf.sh
+. /sf/shells/MC_Conf.sh
 
 #nochkファイルがあれば監視しない
 if [ -e ${MC_SHELL}/${MC_NOCHK} ]; then
@@ -14,7 +14,7 @@ MC_PROC_CHECK=`ps -ef | grep ${MC_PROC_NAME} | grep -v grep`
 #Minecraftプロセスが存在しない場合、起動する
 if [[ -z ${MC_PROC_CHECK} ]] ; then
   echo "minecraft server is down. : starting server..."
-  sh ${MC_SHELL}/MCStart.sh
+  sh ${MC_SHELL}/MC_Start.sh
 else
   echo "minecraft server is alive."
 fi
