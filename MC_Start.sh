@@ -24,6 +24,5 @@ fi
 cd ${MC_HOME}
 screen -AmdS ${SCREEN_NAME} java -Xms8G -Xmx8G -jar ${MC_JAR}
 
-# 起動完了のメッセージを送信
-MSG=$(date '+%Y-%m-%d-%H:%M:%S')"_[INFO]_MinecraftServer_started"
-${MC_SHELL}/MC_SendMessageToDiscord.sh "${MSG}"
+# サーバ起動完了通知
+${MC_SHELL}/MC_SendMessageToDiscord.sh -i "サーバの起動を完了しました"

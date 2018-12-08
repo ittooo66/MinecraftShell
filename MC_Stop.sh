@@ -25,3 +25,6 @@ while [ -n "$(screen -list | grep -o "${SCREEN_NAME}")" ]
 do
   sleep 1
 done
+
+# サーバ停止完了通知
+${MC_SHELL}/MC_SendMessageToDiscord.sh -i "サーバの停止を完了しました"

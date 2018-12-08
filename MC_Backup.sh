@@ -10,3 +10,6 @@
 # tarアーカイブの実施
 cd /
 tar cvfz ${MC_BACKUP}/`date +%Y_%m%d_%H%M`.tar.gz .${MC_HOME}
+
+# バックアップ完了報告
+${MC_SHELL}/MC_SendMessageToDiscord.sh -i "Minecraftのバックアップを完了しました"

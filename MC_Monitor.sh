@@ -21,8 +21,9 @@ MC_PROC_CHECK=`ps -ef | grep ${MC_PROC_NAME} | grep -v grep`
 
 # プロセスがない場合、サーバの起動(MC_Start.sh)
 if [[ -z ${MC_PROC_CHECK} ]] ; then
-  echo "minecraft server is down. : starting server..."
+  # プロセスが存在しない場合
+  ${MC_SHELL}/MC_SendMessageToDiscord.sh -w "Minecraftが未起動のため、これより起動します"
   sh ${MC_SHELL}/MC_Start.sh
 else
-  echo "minecraft server is alive."
+  echo server is active
 fi
