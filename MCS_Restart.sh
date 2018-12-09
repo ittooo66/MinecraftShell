@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # 設定読み込み
-. /sf/shells/MC_Conf.sh
+. /sf/scripts/Server_Config.sh
 
 # =====Minecraft再起動シェル=====
 #  1. サーバに再起動を周知
@@ -13,15 +13,13 @@
 # ==============================
 
 # サーバに再起動を周知
-screen -p 0 -S ${SCREEN_NAME} -X eval 'stuff "say 30秒後にサーバーを再起動します\015"'
-screen -p 0 -S ${SCREEN_NAME} -X eval 'stuff "say すぐに再接続可能になるので、しばらくお待ち下さい\015"'
+screen -p 0 -S ${MCS_SCREEN_NAME} -X eval 'stuff "say 30秒後にサーバーを再起動します\015"'
+screen -p 0 -S ${MCS_SCREEN_NAME} -X eval 'stuff "say すぐに再接続可能になるので、しばらくお待ち下さい\015"'
 sleep 30
 
 # サーバ停止
-sh ${MC_SHELL}/MC_Stop.sh
-
+${MCS_SCRIPTS}/MCS_Stop.sh
 # サーバのバックアップ
-sh ${MC_SHELL}/MC_Backup.sh
-
+${MCS_SCRIPTS}/MCS_Backup.sh
 # サーバの起動
-sh ${MC_SHELL}/MC_Start.sh
+${MCS_SCRIPTS}/MCS_Start.sh

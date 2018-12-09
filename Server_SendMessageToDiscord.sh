@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # 設定読み込み
-. /sf/shells/MC_Conf.sh
+. /sf/scripts/Server_Config.sh
 
 # =====メッセージ送信シェル=====
 #  オプションに応じてメッセージをDiscordに送信する。オプションは以下。

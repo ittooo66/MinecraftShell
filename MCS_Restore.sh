@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # 設定読み込み
-. /sf/shells/MC_Conf.sh
+. /sf/scripts/Server_Config.sh
 
 # =====Minecraftリストアシェル=====
 #  1. 直近のtar.gzファイルパスを取得
@@ -9,11 +9,11 @@
 # ================================
 
 # 直近のtar.gzファイルパスを取得
-FILENAME=`ls -t ${MC_BACKUP} | grep ".tar.gz" | head -n 1`
+filename=`ls -t ${MCS_BACKUP} | grep ".tar.gz" | head -n 1`
 
 # ルートからtar展開
 cd /
-tar xvf ${MC_BACKUP}/${FILENAME}
+tar xvf ${MCS_BACKUP}/$filename
 
 # Restore完了通知
-${MC_SHELL}/MC_SendMessageToDiscord.sh -i "サーバのリストアを完了しました"
+${MCS_SCRIPTS}/Server_SendMessageToDiscord.sh -i "サーバのリストアを完了しました"

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # 設定読み込み
-. /sf/shells/MC_Conf.sh
+. /sf/scripts/Server_Config.sh
 
 # =====Minecraft起動シェル=====
 #  1. nochkファイルの削除
@@ -11,18 +11,18 @@
 # ============================
 
 # nochkファイルの削除
-if [[ ! -z ${MC_SHELL} && ! -z ${MC_NOCHK} ]] ; then
-  rm -f ${MC_SHELL}/${MC_NOCHK}
+if [[ ! -z ${MCS_SCRIPTS} && ! -z ${MCS_NOCHK} ]] ; then
+  rm -f ${MCS_SCRIPTS}/${MCS_NOCHK}
 fi
 
 # tmpfsが空の場合（サーバ再起動後）はリストア
-if [[ ! -d  ${MC_HOME} ]] ; then
-  ${MC_SHELL}/MC_Restore.sh
+if [[ ! -d  ${MCS_HOME} ]] ; then
+  ${MCS_SCRIPTS}/MCS_Restore.sh
 fi
 
 # サーバ起動
-cd ${MC_HOME}
-screen -AmdS ${SCREEN_NAME} java -Xms8G -Xmx8G -jar ${MC_JAR}
+cd ${MCS_HOME}
+screen -AmdS ${MCS_SCREEN_NAME} java -Xms8G -Xmx8G -jar ${MCS_JAR}
 
 # サーバ起動完了通知
-${MC_SHELL}/MC_SendMessageToDiscord.sh -i "サーバの起動を完了しました"
+${MCS_SCRIPTS}/Server_SendMessageToDiscord.sh -i "サーバの起動を完了しました"

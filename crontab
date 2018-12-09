@@ -1,0 +1,8 @@
+* * * * * crontab /sf/scripts/crontab
+
+# -----定期実行コマンド-----
+# ※設定内容は即時反映および実行されます。気をつけてください
+*/10 * * * * /sf/scripts/Server_Monitor.sh > /dev/null 2>&1
+* * * * * /sf/scripts/MCS_Monitor.sh > /dev/null 2>&1
+00 06 * * * /sf/scripts/MCS_Restart.sh > /dev/null 2>&1
+# -------------------------
